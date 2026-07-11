@@ -1,0 +1,127 @@
+aid: limra
+name: LIMRA
+review:
+  question: Does LIMRA expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-11'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. LIMRA publishes no hosted API of any
+    kind - REST, WebSocket, SSE, or otherwise - so there is no server-push
+    transport (or any documented LIMRA-hosted transport) to model. The LIMRA
+    Data Exchange (LDEx) Standards define REST endpoints (OpenAPI 3.1) and
+    file-based payloads that insurance carriers and benefits administration
+    platforms implement point-to-point between themselves; those
+    implementations run on the implementing companies' infrastructure and are
+    out of scope for a LIMRA AsyncAPI document.
+findings:
+  summary: |
+    LIMRA does not publish a documented public WebSocket API - and in fact
+    hosts no public developer API at all. LIMRA is a member-based research and
+    trade association for the life insurance and financial services industry
+    (part of LL Global, alongside LOMA). Its core offerings are industry
+    research, sales and market data, benchmarking, and experience studies,
+    delivered to member companies through the login-gated LIMRA.com portal,
+    reports, webinars, and consortium programs - not through an API. No
+    developer portal, API reference, hosted endpoints, or API hostnames exist
+    (api.limra.com, developer.limra.com, and apis.limra.com do not resolve).
+    LIMRA's programmatic footprint is the LIMRA Data Exchange (LDEx)
+    Standards - free, industry-developed standards for workplace benefits data
+    exchange (Benefits Enrollment Management v1.3/v2.0, Benefits Configuration
+    Management v1.0, Evidence of Insurability Status and Decision v1.1) that
+    specify payloads in XML and JSON delivered via structured files (EDI) or
+    REST APIs, with recent releases providing endpoint definitions in OpenAPI
+    3.1. LDEx is a specification, not a service - carriers such as The
+    Hartford host their own LDEx-conformant APIs on their own developer
+    portals. Downloading the standards requires a free LIMRA.com account but
+    not membership. No realtime, bidirectional, or streaming WebSocket
+    (ws:// or wss://) endpoint is documented anywhere.
+  openSource: |
+    LIMRA publishes no open-source SDKs and no public GitHub organization of
+    platform code. The LDEx Standards packages (schemas, implementation
+    models, companion guides, coding supplements, sample transactions) are
+    free to download after registering a LIMRA.com account, but they are
+    distributed as downloadable specification packages rather than an
+    open-source repository.
+  publicApi: false
+  partnerApi: |
+    No LIMRA-hosted partner API exists. The LDEx Standards function as the
+    industry's partner-integration contract - benefits administration
+    platforms and insurance carriers implement LDEx REST endpoints and file
+    feeds directly with each other. Example third-party implementation: The
+    Hartford's developer portal (developer.thehartford.com) documents a
+    "LIMRA Data Exchange Enrollment" API that is The Hartford's
+    implementation of the LDEx standard, not a LIMRA service.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: LIMRA hosts no REST API. The LDEx Standards define REST endpoints
+        in OpenAPI 3.1 for carriers and benefits administration platforms to
+        implement on their own infrastructure.
+    - protocol: File Transfer
+      scheme: sftp
+      documented: false
+      note: LDEx also supports structured-file (EDI-style) payload delivery in
+        XML or JSON between implementing partners. LIMRA itself operates no
+        public file feed.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in LIMRA's public
+        materials or the LDEx Standards as of the review date.
+  endpointsModeled: none
+  disambiguation: |
+    LIMRA (originally the Life Insurance Marketing and Research Association)
+    merged operations with LOMA under the LL Global, Inc. parent. This entry
+    covers the LIMRA research and standards organization at limra.com, not
+    LOMA's education business at loma.org.
+sources:
+  - url: https://www.limra.com
+    type: Website
+    note: Primary LIMRA site. Research, benchmarking, and member services -
+      no developer or API section.
+  - url: https://www.limra.com/en/research/
+    type: Website
+    note: Research hub. Studies and benchmarks are member-gated behind
+      LIMRA.com login; no programmatic access documented.
+  - url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/
+    type: Documentation
+    note: LIMRA Data Exchange (LDEx) Standards landing page. Standards for
+      workplace benefits data exchange via EDI, files, and REST APIs.
+  - url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/ldex-overview/
+    type: Documentation
+    note: LDEx overview. Recent releases include REST endpoints specified in
+      OpenAPI 3.1; payloads in XML, JSON, or YAML.
+  - url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/standards-download/
+    type: Documentation
+    note: Standards download. Free LIMRA.com registration required; member
+      company employment not required. Packages include implementation models
+      in XML and JSON plus REST API delivery methods.
+  - url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/standards-documentation/
+    type: Documentation
+    note: Companion guides, coding supplements, schema glossary, and partner
+      integration supplements. No sandbox, developer portal, or hosted
+      endpoints - support is via a community forum.
+  - url: https://developer.thehartford.com/hig/b2b-prod/taxonomy/term/10
+    type: Documentation
+    note: Example of a carrier (The Hartford) hosting its own LDEx-conformant
+      "LIMRA Data Exchange Enrollment" API - demonstrates that LDEx endpoints
+      live on implementers' infrastructure, not LIMRA's.
+  - url: https://www.limra.com/en/about/membership/
+    type: Website
+    note: Membership overview. Research, benchmarks, and experience studies
+      are member benefits; annual dues set by the Board of Directors.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and LIMRA hosts no documented public
+    or partner API of any kind. The apis.yml entry is maintained as an honest
+    stub (kind: organization, no apis array, membership-based plans only)
+    rather than fabricating endpoints. The LDEx Standards are documented as
+    common properties because they are the provider's real programmatic
+    artifact - an implementable specification with OpenAPI 3.1 endpoint
+    definitions - but no LIMRA-hosted endpoints were modeled because none
+    exist.

@@ -1,0 +1,108 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: LIMRA
+providerId: limra
+created: '2026-07-11'
+modified: '2026-07-11'
+reconciled: false
+tags:
+- Life Insurance
+- Insurance Research
+- Benchmarking
+- Financial Services
+- Membership
+- Plans
+description: >-
+  LIMRA has no API product and therefore no API pricing. Access to its
+  research, benchmarking, and experience-study data is a benefit of
+  organizational membership - member companies (primarily life insurers,
+  annuity providers, and workplace benefits carriers) pay annual dues set each
+  year by the LL Global Board of Directors, plus a US$300 application fee on
+  joining. Member rates also apply to assessment tools, conferences,
+  consortium and custom research, and professional development. The one
+  offering with a self-serve access model is the LIMRA Data Exchange (LDEx)
+  Standards, which are free to download after registering a LIMRA.com
+  account - membership is not required. Exact dues amounts are not published
+  and are not reconciled here.
+notes: >-
+  Dues are established annually by the Board of Directors and vary by company;
+  no public rate card exists. Verify current membership terms with LIMRA
+  member services during reconciliation. The LDEx Standards are a
+  specification download, not a hosted service - implementing them carries no
+  LIMRA usage fee.
+sources:
+- https://www.limra.com/en/about/membership/
+- https://www.limra.com/en/about/membership/becoming-a-member/
+- https://www.limra.com/en/solutions-and-services/data-exchange-standards/standards-download/
+- https://www.limra.com/en/research/
+plans:
+- id: limra-ldex-standards
+  name: LDEx Standards Download
+  type: free
+  description: >-
+    The LIMRA Data Exchange (LDEx) Standards packages - Benefits Enrollment
+    Management, Benefits Configuration Management, and Evidence of
+    Insurability Status and Decision - including implementation models in XML
+    and JSON, REST endpoint definitions (OpenAPI 3.1 in recent releases),
+    companion guides, coding supplements, and sample transactions. Free to
+    download after creating a LIMRA.com account; employment at a member
+    company is not required.
+  entries:
+  - label: Standards Download
+    name: ldex_standards_download
+    type: flat
+    metric: download
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: free with LIMRA.com registration
+    userMultiplied: false
+  elements:
+  - name: LDEx Standards Packages
+  - name: XML and JSON Implementation Models
+  - name: OpenAPI 3.1 Endpoint Definitions
+  - name: Companion Guides and Coding Supplements
+  - name: Community Forum Support
+- id: limra-membership
+  name: LIMRA Membership
+  type: enterprise
+  description: >-
+    Organizational membership for life insurance and financial services
+    companies. Grants access to member-gated research, sales and market data,
+    benchmarking, experience studies, Compass programs, publications, and
+    webinars via the LIMRA.com portal, plus member rates on assessment tools,
+    conferences, consortium and custom research, and professional development.
+    Annual dues are set each year by the Board of Directors; a US$300
+    application fee applies to new LIMRA or LIMRA-and-LOMA applications.
+  entries:
+  - label: Annual Membership Dues
+    name: membership_dues
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: annual dues set by the Board of Directors (contact LIMRA member services)
+    userMultiplied: false
+  - label: Application Fee
+    name: application_fee
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: US$300 one-time application fee
+    userMultiplied: false
+  elements:
+  - name: Member-Gated Research and Studies
+  - name: Benchmarking and Experience Studies
+  - name: Sales and Market Data
+  - name: Member Rates on Conferences and Programs
+  - name: LIMRA.com Portal Access
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

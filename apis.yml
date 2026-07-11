@@ -1,0 +1,52 @@
+aid: limra
+url: https://raw.githubusercontent.com/api-evangelist/limra/refs/heads/main/apis.yml
+name: LIMRA
+kind: organization
+description: LIMRA is a member-based research and trade association for the life
+  insurance and financial services industry, operating alongside LOMA under the
+  LL Global umbrella. It provides industry research, sales and market data,
+  benchmarking, experience studies, and professional development to member
+  companies - primarily life insurers, annuity providers, and workplace benefits
+  carriers. LIMRA does not operate a public developer API or developer portal.
+  Its research, benchmarking, and experience-study data are delivered through
+  the member-gated LIMRA.com portal, reports, and consortium programs rather
+  than a programmatic interface. LIMRA's most API-relevant offering is the
+  LIMRA Data Exchange (LDEx) Standards - free, industry-developed data exchange
+  standards for workplace benefits (benefits enrollment management, benefits
+  configuration management, and evidence of insurability) that define payloads
+  in XML and JSON and, in recent releases, REST endpoints specified in OpenAPI
+  3.1. LDEx is a specification that insurance carriers and benefits
+  administration platforms implement between themselves; LIMRA publishes the
+  standard (registration required to download, membership not required) but
+  does not host any live endpoints. This entry is an honest documentation stub
+  kept for catalog completeness; it will be updated if LIMRA ever ships a
+  hosted public API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Life Insurance
+- Insurance Research
+- Benchmarking
+- Financial Services
+- Employee Benefits
+- Data Exchange Standards
+- Trade Association
+- No Public API
+created: '2026-07-11'
+modified: '2026-07-11'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://www.limra.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/limra
+- type: Documentation
+  url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/
+- type: Documentation
+  url: https://www.limra.com/en/solutions-and-services/data-exchange-standards/standards-documentation/
+- type: Website
+  url: https://www.limra.com/en/research/
+- type: Plans
+  url: plans/limra-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
