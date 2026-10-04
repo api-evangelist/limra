@@ -49,7 +49,7 @@ tags:
 - Life Insurance
 - Insurance Research
 - Benchmarking
-- Financial-Services
+- Financial Services
 - Employee Benefits
 - Data Exchange Standards
 - Trade Association
@@ -63,6 +63,7 @@ tags_raw:
 - Data Exchange Standards
 - Trade Association
 - No Public API
+- Financial-Services
 created: '2026-07-11'
 modified: '2026-07-11'
 specificationVersion: '0.23'
