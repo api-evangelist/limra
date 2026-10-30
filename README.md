@@ -1,4 +1,4 @@
-# LIMRA (limra)
+# LIMRA
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,46 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-LIMRA is a member-based research and trade association for the life insurance and financial services industry, operating alongside LOMA under the LL Global umbrella. It provides industry research, sales and market data, benchmarking, experience studies, and professional development to member companies - primarily life insurers, annuity providers, and workplace benefits carriers.
+LIMRA is a member-based research and trade association for the life insurance and financial services industry, operating alongside LOMA under the LL Global umbrella. It provides industry research, sales and market data, benchmarking, experience studies, and professional development to member companies - primarily life insurers, annuity providers, and workplace benefits carriers. LIMRA does not operate a public developer API or developer portal. Its research, benchmarking, and experience-study data are delivered through the member-gated LIMRA.com portal, reports, and consortium programs rather than a programmatic interface. LIMRA's most API-relevant offering is the LIMRA Data Exchange (LDEx) Standards - free, industry-developed data exchange standards for workplace benefits (benefits enrollment management, benefits configuration management, and evidence of insurability) that define payloads in XML and JSON and, in recent releases, REST endpoints specified in OpenAPI 3.1. LDEx is a specification that insurance carriers and benefits administration platforms implement between themselves; LIMRA publishes the standard (registration required to download, membership not required) but does not host any live endpoints. This entry is an honest documentation stub kept for catalog completeness; it will be updated if LIMRA ever ships a hosted public API.
 
-**LIMRA does not operate a public developer API or developer portal.** Its research, benchmarking, and experience-study data are delivered through the member-gated LIMRA.com portal, reports, and consortium programs rather than a programmatic interface. Membership is organizational, with annual dues set by the Board of Directors.
+**Areas:** Life Insurance · Insurance Research · Benchmarking · Financial Services · Employee Benefits · Data Exchange Standards · Trade Association
 
-LIMRA's most API-relevant offering is the **LIMRA Data Exchange (LDEx) Standards** - free, industry-developed data exchange standards for workplace benefits (Benefits Enrollment Management, Benefits Configuration Management, and Evidence of Insurability Status and Decision) that define payloads in XML and JSON and, in recent releases, REST endpoints specified in OpenAPI 3.1. LDEx is a specification that insurance carriers and benefits administration platforms implement between themselves (for example, The Hartford hosts an LDEx-conformant enrollment API on its own developer portal); LIMRA publishes the standard (a free LIMRA.com account is required to download, membership is not) but hosts no live endpoints itself.
+## LIMRA on APIs.io
 
-This entry is an honest documentation stub kept for catalog completeness - no endpoints are modeled because none exist on LIMRA's side. It will be updated if LIMRA ever ships a hosted public API.
+Everything profiled for LIMRA is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/limra/](https://apis.io/providers/limra/)** — or go straight to one of the APIs or properties below.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/limra/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/limra/refs/heads/main/apis.yml)
+### Published properties
 
-## Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Life Insurance
-- Insurance Research
-- Benchmarking
-- Financial Services
-- Employee Benefits
-- Data Exchange Standards
-- Trade Association
-- No Public API
+#### Security (1)
 
-## Timestamps
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Created:** 2026-07-11
-- **Modified:** 2026-07-11
+- [Limra Domain Security](https://apis.io/security/limra/limra-domain-security/)
 
-## APIs
+#### Plans and pricing (1)
 
-None. LIMRA hosts no public or partner API. The LDEx Standards define REST endpoints (OpenAPI 3.1) for carriers and benefits administration platforms to implement on their own infrastructure - those implementations belong to the implementing companies, not to LIMRA.
+Published plans, tiers and prices.
 
-## Common Properties
+- [Limra Plans Pricing](https://apis.io/plans/limra/limra-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.limra.com)
-- [LinkedIn](https://www.linkedin.com/company/limra)
-- [Documentation - LDEx Standards](https://www.limra.com/en/solutions-and-services/data-exchange-standards/)
-- [Documentation - LDEx Standards Documentation](https://www.limra.com/en/solutions-and-services/data-exchange-standards/standards-documentation/)
-- [Website - Research](https://www.limra.com/en/research/)
-- [Plans](plans/limra-plans-pricing.yml)
+- [Documentation](https://www.limra.com/en/solutions-and-services/data-exchange-standards/)
+- [Blog](https://www.limra.com/en/newsroom/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 6.6** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 5.3 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.3** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/limra/](https://apis.io/providers/limra/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for LIMRA: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/limra/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
